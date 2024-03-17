@@ -1,17 +1,27 @@
 package org.example;
 
-import org.example.expenses.Orzechowa;
-import org.example.expenses.OtherBills;
-import org.example.expenses.Stoczniowcow;
-import org.example.expenses.Towarowa;
+import org.example.expenses.*;
+
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Orzechowa orzechowa = new Orzechowa(0,0,0,0,0,0,0,0);
-        Towarowa towarowa = new Towarowa(0,0,0,0);
-        Stoczniowcow stoczniowcow = new Stoczniowcow(0,0,0);
-        OtherBills otherBills = new OtherBills(0,0,0,0);
+        Scanner scanner = new Scanner(System.in);
+        Account account = new Account();
 
+        System.out.println("""
+                               
+                Menu:
+                            
+                               
+                1. Lista rachunków za dany miesiąc
+                2. Utwórz nowy miesiąc
+                
+                """);
 
+        int menu = scanner.nextInt();
+        switch (menu) {
+            case 1 -> account.showAccountInformation();
+        }
     }
 }
